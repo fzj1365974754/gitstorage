@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<students>
+    <student>
+        <name>李明</name>
+        <gender>nan</gender>
+        <age>16</age>
+    </student>
+    <student>
+        <name>啊方</name>
+        <gender>nv</gender>
+        <age>18</age>
+    </student>
+</students>

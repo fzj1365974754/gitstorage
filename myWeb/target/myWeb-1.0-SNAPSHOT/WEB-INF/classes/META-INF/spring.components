@@ -1,0 +1,10 @@
+com.cookie.CookieDemo1=javax.servlet.annotation.WebServlet
+com.cookie.CookieDemo2=javax.servlet.annotation.WebServlet
+com.cookie.CookieTest=javax.servlet.annotation.WebServlet
+com.servlet.CheckCodeServlet=javax.servlet.annotation.WebServlet
+com.servlet.LoginServlet=javax.servlet.annotation.WebServlet
+com.servlet.dowloadServlet=javax.servlet.annotation.WebServlet
+com.servlet.failServlet=javax.servlet.annotation.WebServlet
+com.servlet.successServlet=javax.servlet.annotation.WebServlet
+com.session.sessionDemo1=javax.servlet.annotation.WebServlet
+com.session.sessionDemo2=javax.servlet.annotation.WebServlet
