@@ -1,7 +1,5 @@
 package com.utlis;
-
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.Connection;
@@ -15,7 +13,7 @@ public class DruidUtils {
     static {
         try {
             Properties pro=new Properties();
-            pro.load(DruidUtils.class.getClassLoader().getResourceAsStream("druid.properties"));
+            pro.load(DruidUtils.class.getClassLoader().getResourceAsStream("JDBC/druid.properties"));
             ds= DruidDataSourceFactory.createDataSource(pro);
         } catch (IOException e) {
             e.printStackTrace();

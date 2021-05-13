@@ -1,6 +1,6 @@
 package com.servlet;
 
-import com.dao.UsersDao;
+import com.serviceIml.UserServiceIml;
 import com.domain.Users;
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -19,19 +19,29 @@ public class LoginServlet extends HttpServlet  {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
-        String username=req.getParameter("username");
-        String password = req.getParameter("password");
+//        String username=req.getParameter("username");
+//        String password = req.getParameter("password");
         String checkcode = req.getParameter("checkcode");
-        //封装USer对象
-        Users loginuser =new Users();
-        loginuser.setUsername(username);
-        loginuser.setPassword(password);
+//        //封装USer对象
+//        Users loginuser =new Users();
+//        loginuser.setUsername(username);
+//        loginuser.setPassword(password);
+        Map<String, String[]> map = req.getParameterMap();
         HttpSession session = req.getSession();
+        Users loginuser=new Users();
+        try {
+            BeanUtils.populate(loginuser,map);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        System.out.println(loginuser);
         String verityCode = (String)session.getAttribute("verityCode");
         //删除验证码session中存储的
         session.removeAttribute(verityCode);
         //调用userdao的login方法
-        UsersDao dao=new UsersDao();
+        UserServiceIml dao=new UserServiceIml();
         Users user = dao.login(loginuser);
         //忽略验证码大小写
         if(verityCode!=null && verityCode.equalsIgnoreCase(checkcode)) {

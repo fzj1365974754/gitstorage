@@ -6,13 +6,17 @@ public class Users {
     private String password;
     private String email;
 
-    public int getUserid() {
-        return userid;
+    public Users() {
     }
 
-    public void setUserid(int userid) {
+    public Users(int userid, String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
         this.userid = userid;
     }
+
+
 
     public String getUsername() {
         return username;
@@ -22,9 +26,7 @@ public class Users {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() { return password; }
 
     public void setPassword(String password) {
         this.password = password;
@@ -38,6 +40,13 @@ public class Users {
         this.email = email;
     }
 
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
+    }
     @Override
     public String toString() {
         return "Users{" +

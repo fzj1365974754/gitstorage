@@ -13,7 +13,7 @@ public class JdbcUtils {
     private static String driver;
     static{
         try {
-            String path= JdbcUtils.class.getClassLoader().getResource("jdbc.properties").getPath();
+            String path= JdbcUtils.class.getClassLoader().getResource("JDBC/jdbc.properties").getPath();
             Properties pro=new Properties();
             pro.load(new FileReader(path));
             url= pro.getProperty("url");

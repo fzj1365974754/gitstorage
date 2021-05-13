@@ -1,16 +1,13 @@
 package com.servlet;
 
-import com.domain.CreateVerificationCode;
-import com.domain.CreateVerificationCodeImage;
+import com.utlis.CreateVerificationCode;
+import com.utlis.CreateVerificationCodeImage;
 
 import javax.imageio.ImageIO;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.Random;
 
 @WebServlet(name = "CheckCodeServlet", value = "/CheckCodeServlet")
 public class CheckCodeServlet extends HttpServlet {
