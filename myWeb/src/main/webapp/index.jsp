@@ -11,7 +11,7 @@
     <script>
         window.onload=function (){
             document.getElementById("img").onclick=function (){
-                this.src="/CheckCodeServlet?time"+new Date().getTime();
+                this.src="/myWeb/CheckCodeServlet?time"+new Date().getTime();
             }
         }
     </script>
@@ -20,7 +20,7 @@
 </h1>
 <br/>
 
-<form action="/loginServlet" method="post">
+<form action="/myWeb/loginServlet" method="post">
         <table>
             <tr>
                 <td>用户名</td>
@@ -35,7 +35,7 @@
                 <td><input type="text" name="checkcode"></td>
             </tr>
             <tr>
-                <td colspan="2"><img id="img" src="/CheckCodeServlet"></td>
+                <td colspan="2"><img id="img" src="/myWeb/CheckCodeServlet"></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="登录"></td>
@@ -43,7 +43,7 @@
         </table>
 </form>
 <hr>
-<a href="/dowloadServlet?filename=好看.png">图片1</a>
+<a href="/myWeb/dowloadServlet?filename=好看.png">图片1</a>
 <hr>
 <%--<div><%=request.getAttribute("cc_error")==null? "": request.getAttribute("cc_error") %></div>--%>
 ${requestScope.cc_error}
